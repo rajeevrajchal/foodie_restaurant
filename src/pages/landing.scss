@@ -1,0 +1,59 @@
+@import "../assets/styles/theme";
+
+//navbar
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: 0.3s;
+  padding: 17px 8vw;
+  box-sizing: border-box;
+  &.scrolled {
+    box-shadow: 0 4px 16px rgba(70, 71, 72, 0.7);
+    background: $light-color;
+    color: $dark-color;
+  }
+}
+
+section {
+  padding: 10vh 8vw;
+}
+
+section.welcome-content {
+  box-sizing: border-box;
+  flex: 1;
+  .welcome-text-content {
+    .welcome-text-title{
+      width: 400px;
+    }
+    .welcome-text-desc{
+      width: 500px;
+    }
+    .order-button{
+      width: 30%;
+    }
+  }
+  .welcome-image-area {
+    box-sizing: border-box;
+    .welcome-image {
+      width: 500px;
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+//footer
+footer {
+  width: 100%;
+  padding: 17px 8vw;
+  box-sizing: border-box;
+}
