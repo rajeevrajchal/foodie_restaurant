@@ -1,4 +1,8 @@
-@import "../assets/styles/theme";
+@import "../styles/theme";
+
+.headline {
+  color: $primary-color;
+}
 
 //navbar
 nav {
@@ -9,6 +13,8 @@ nav {
   transition: 0.3s;
   padding: 17px 8vw;
   box-sizing: border-box;
+  background: transparent;
+
   &.scrolled {
     box-shadow: 0 4px 16px rgba(70, 71, 72, 0.7);
     background: $light-color;
@@ -16,29 +22,42 @@ nav {
   }
 }
 
+.welcome {
+  margin-top: -12vh;
+  left: 0;
+  background: url("../../public/images/welcome-bg.svg") fixed no-repeat;
+  background-size: auto;
+}
+
 section {
   padding: 10vh 8vw;
 }
 
 section.welcome-content {
+  padding-top: 20vh;
   box-sizing: border-box;
   flex: 1;
+
   .welcome-text-content {
-    .welcome-text-title{
+    .welcome-text-title {
       width: 400px;
     }
-    .welcome-text-desc{
+
+    .welcome-text-desc {
       width: 500px;
     }
-    .order-button{
+
+    .order-button {
       width: 30%;
     }
   }
+
   .welcome-image-area {
     box-sizing: border-box;
+
     .welcome-image {
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
 
       img {
         width: 100%;
@@ -50,10 +69,78 @@ section.welcome-content {
   }
 }
 
+section.middle-contact {
+  .middle-contact-item {
+    box-sizing: border-box;
+    width: 21.5%;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .wrapper-image {
+      background: $primary-color;
+      padding: $md;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+    }
+  }
+}
+
+section.how-it-work {
+  position: relative;
+  box-sizing: border-box;
+  .hiw-content {
+    box-sizing: border-box;
+    .hiw-items {
+      width: 100%;
+      box-sizing: border-box;
+
+      .hiw-item {
+        .image-container {
+          display: flex;
+          justify-content: center;
+        }
+
+        width: 23%;
+        margin-right: 5%;
+        box-sizing: border-box;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+section.menu {
+  .menu-items {
+    width: 100%;
+    box-sizing: border-box;
+    .menu-item{
+      width: 27%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+      box-sizing: border-box;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 //footer
 footer {
+  padding: 10vh 8vw;
   width: 100%;
-  padding: 17px 8vw;
+  background: url("../../public/images/welcome-bg.svg") center repeat;
+  background-size: cover;
   box-sizing: border-box;
 }

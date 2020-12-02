@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 const Welcome = () => {
     return (
@@ -14,9 +15,11 @@ const Welcome = () => {
                         illum incidunt iusto maiores necessitatibus neque optio
                         quam, quod sint totam. Necessitatibus.
                     </div>
-                    <div className="btn primary text-center order-button mt-lg">
-                        Order Now
-                    </div>
+                    <Link href={'/menu'}>
+                        <div className="btn primary text-center order-button mt-lg">
+                            Order Now
+                        </div>
+                    </Link>
                 </div>
                 <div className="welcome-image-area">
                     <div className="welcome-image">

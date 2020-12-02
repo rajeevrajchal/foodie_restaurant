@@ -26,7 +26,7 @@ const Nav = () => {
         <nav className={`navbar flex justify-between align-center item-center  ${scrolled ? 'scrolled' : ''}`}>
             <Link href={'/'}>
                 <div className={'logo logo-text bold mt-sm pointer'}>
-                    Foodie
+                    Restaurant
                 </div>
             </Link>
             <div className={`navbar-items flex align-center item-center`}>
@@ -45,9 +45,11 @@ const Nav = () => {
                         </i>
                     </div>
                 </Link>
-                <div className="btn primary ml-xl ml-sm">
-                    Order Now
-                </div>
+                <Link href={'/menu'}>
+                    <div className="btn primary text-center ml-xl ml-sm">
+                        Order Now
+                    </div>
+                </Link>
             </div>
         </nav>
     );
