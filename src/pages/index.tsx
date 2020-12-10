@@ -1,4 +1,5 @@
 import React from "react";
+
 import ViewPage from "../hoc/viewPage";
 import Welcome from "./Home/components/welcome";
 import AboutUs from "./Home/components/about_us";
@@ -13,12 +14,14 @@ export default function Home() {
             <ViewPage
                 title={'Restaurant '}
                 description={'Restaurant is a place for having lunch with love family. '}>
-                <Welcome/>
-                <MiddleContact/>
-                <AboutUs/>
-                <HowItWork/>
-                <MenuHome/>
-                <Question/>
+                <main className="home">
+                    <Welcome/>
+                    <MiddleContact/>
+                    <AboutUs/>
+                    <HowItWork/>
+                    <MenuHome/>
+                    <Question/>
+                </main>
             </ViewPage>
         </>
     )

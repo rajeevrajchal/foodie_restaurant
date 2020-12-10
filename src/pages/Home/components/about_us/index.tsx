@@ -1,10 +1,13 @@
 import React from 'react';
+
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 const AboutUs = () => {
     return (
         <>
-            <section className={'about-us welcome-content flex justify-between align-center items-center'}>
+            <section className={'about_us-us welcome-content flex justify-between align-center items-center'}>
                 <div className="welcome-image-area">
                     <div className="welcome-image">
                         <Image
@@ -30,9 +33,11 @@ const AboutUs = () => {
                         illum incidunt iusto maiores necessitatibus neque optio
                         quam, quod sint totam. Necessitatibus.
                     </div>
-                    <div className="btn primary text-center order-button mt-lg">
-                        Know More
-                    </div>
+                    <Link href={"/about_us"}>
+                        <div className="btn primary text-center order-button mt-lg">
+                            Know More
+                        </div>
+                    </Link>
                 </div>
             </section>
         </>

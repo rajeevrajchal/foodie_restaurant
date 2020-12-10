@@ -17,7 +17,7 @@ const Cart = () => {
     return (
         <ViewPage
             title={'Foodie: Cart '}
-            description={'this is ecommerce'}>
+            description={'this is restaurant'}>
             <div className={'cart'}>
                 <Modal/>
                 <p className={cartStyle.example}> this is cart </p>

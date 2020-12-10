@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/image";
+import Link from 'next/link'
 import MenuCard from "../../../../common/components/menu_card";
 
 const MenuHome = () => {
@@ -38,9 +38,11 @@ const MenuHome = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-lg">
-                <div className="btn primary text-center">
-                    Load More
-                </div>
+                <Link href={'/menu'}>
+                    <div className="btn primary text-center">
+                        See More
+                    </div>
+                </Link>
             </div>
         </section>
     );

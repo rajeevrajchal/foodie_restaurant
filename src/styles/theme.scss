@@ -318,6 +318,7 @@ img {
 
 .input-group {
   margin-top: $md;
+  width: 100%;
   box-sizing: border-box;
 
   &:last-child {
@@ -340,6 +341,7 @@ img {
     input, select, textarea {
       border: none;
       width: 100%;
+      flex: 1;
       background: transparent;
       padding: $md;
       outline: none;

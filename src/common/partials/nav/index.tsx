@@ -1,10 +1,14 @@
 import React, {useState, useRef, useEffect} from 'react';
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+
 
 import navItem from "../../../mock/navItems";
 
 const Nav = () => {
     const [scrolled, setScrolled] = useState(false)
+    const {asPath} = useRouter();
+
     const navRef = useRef<any>()
     navRef.current = scrolled;
     useEffect(() => {
@@ -32,8 +36,10 @@ const Nav = () => {
             <div className={`navbar-items flex align-center item-center`}>
                 {
                     navItem.map((item, index: number) => (
-                        <div className={`logo-text capitalize bold ml-xl mt-sm pointer`} key={index}>
-                            {item.label}
+                        <div className={`logo-text capitalize bold ml-xl mt-sm pointer ${asPath === item.link && 'activeNav'}`} key={index}>
+                            <Link href={item.link}>
+                                {item.label}
+                            </Link>
                         </div>
                     ))
                 }

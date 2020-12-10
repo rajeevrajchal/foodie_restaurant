@@ -1,19 +1,21 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import ViewPage from "../../hoc/viewPage";
+import Filter from "../menu/components/filter";
 import MenuCard from "../../common/components/menu_card";
 import DataLoading from "../../common/partials/dataLoading";
-import Filter from "./components/filter";
 
-const Menu = () => {
+const Offer = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
     return (
-        <ViewPage title={'Foodie: Menu'} description={'this is foodie special menus '}>
+        <ViewPage
+            description={'Restaurant Offer Page '}
+            title={'We offer all  Nepali  / Newari cusine '}>
             <main className={'menu'}>
-                <div className="menu-header">
-                    <Filter/>
+                <div className="menu-header headline title text-center mt-lg">
+                    Our Special Offers
                 </div>
                 <section>
-                    <div className="menu-items flex wrap mt-lg">
+                    <div className="menu-items flex wrap mt-xl">
 
                         <div className="menu-item">
                             <MenuCard/>
@@ -50,4 +52,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Offer;
