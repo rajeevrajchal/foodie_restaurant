@@ -1,4 +1,5 @@
 @import "layout";
+@import "color";
 
 //anchor link
 a {
@@ -356,7 +357,9 @@ img {
     }
   }
 }
-
+.error-text{
+  color: $danger-color;
+}
 //new card for menu-items
 .menu-card{
   box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.12);
@@ -391,6 +394,43 @@ img {
       height: 100%;
       border-radius: 40px 0 40px 0;
       object-fit: cover;
+    }
+  }
+}
+
+.form-card{
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 40px 0 40px 0;
+  .form-content{
+    padding: $md;
+    box-sizing: border-box;
+  }
+  .form-button{
+    .form-button-item{
+      background: $primary-color;
+      padding: $md;
+      width: 100px;
+      cursor: pointer;
+      border-radius: 40px 0 40px 0;
+      color: $light-color;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      &:active {
+        transform: translateY(1px);
+      }
+      &:active, &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      i{
+        color: $light-color;
+        font-size: 36px;
+      }
     }
   }
 }
